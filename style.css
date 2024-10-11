@@ -1,0 +1,168 @@
+    /* font จาก google fonts */
+    /* font-family: 'Press Start 2P', system-ui; */
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+    /* font-family: 'Bai Jamjuree', sans-serif; */
+    @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap");
+
+    /* Code for Firefox */
+    ::-moz-selection {
+        background: #000000B3;
+        color: #1ED760;
+    }
+
+    ::selection {
+        background: #000000B3;
+        color: #1ED760;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+        font-family: 'Bai Jamjuree', sans-serif;
+    }
+
+    html {
+        scrollbar-color: #409EFE #000000;
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+        /* ทำให้เลื่อนนุ่มนวล */
+    }
+
+    body {
+        animation: opacity 1s ease-in-out;
+    }
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    img {
+        user-select: none;
+        /* ป้องกันการคุมดำ */
+        -webkit-user-drag: none;
+        /* ป้องกันการลากในเบราว์เซอร์ที่รองรับ Webkit เช่น Chrome */
+        -moz-user-select: none;
+        /* สำหรับ Firefox */
+        -ms-user-select: none;
+        /* สำหรับ Internet Explorer/Edge */
+    }
+
+    label input:checked~nav {
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    a.active {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    header a:focus {
+        background-color: #ffffff;
+        color: #000000;
+        outline: none;
+    }
+
+    .group a:focus+ul,
+    .group a:hover+ul {
+        display: block;
+    }
+
+    ul.absolute {
+        display: none;
+    }
+
+    @media (max-width: 640px) {
+
+        /* From Uiverse.io by jeremyssocial */
+        .container {
+            background: linear-gradient(135deg,
+                    #121212 25%,
+                    #1A1A1A 25%,
+                    #1A1A1A 50%,
+                    #121212 50%,
+                    #121212 75%,
+                    #1A1A1A 75%,
+                    #1A1A1A);
+            background-size: 40px 40px;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 40px 40px;
+            }
+        }
+
+    }
+
+    /* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
+
+    .animationShow {
+        opacity: 0;
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+    }
+
+    .animationShow.animationShow {
+        opacity: 1;
+    }
+
+    .animationShow-x {
+        opacity: 0;
+        transform: translatex(50px);
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+    }
+
+    .animationShow-x.showAnimation-x {
+        opacity: 1;
+        transform: translatex(0);
+        /* เลื่อนกลับมาที่เดิม */
+    }
+
+    .animationShow-y {
+        opacity: 0;
+        transform: translatey(50px);
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+    }
+
+    .animationShow-y.showAnimation-Y {
+        opacity: 1;
+        transform: translatey(0);
+        /* เลื่อนกลับมาที่เดิม */
+    }
+
+    /* แอนิเมชันจากซ้ายไปขวา */
+    .skill_per {
+        width: 0;
+        opacity: 0;
+    }
+
+    .animate .skill_per {
+        width: 100%;
+        /* ตั้งค่าให้เต็มความกว้าง */
+        opacity: 1;
+        transition: width 2s ease-in-out, opacity .5s ease-in-out;
+        /* ค่อยๆ เพิ่มแถบจากซ้ายไปขวา */
+    }
+
+    .tooltip {
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+    .animate .tooltip {
+        opacity: 1;
+    }

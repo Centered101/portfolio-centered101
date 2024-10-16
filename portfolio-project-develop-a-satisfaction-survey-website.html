@@ -64,72 +64,13 @@
                 document.write('<p title="Reload this page" class="text-3xl font-bold uppercase cursor-pointer" onclick="resetWindow()">Centered101</p>');
             </script>
         </div>
-        <div translate="yes" class="items-center hidden md:flex">
-            <ul class="flex items-center gap-2 text-white">
-                <li>
-                    <a href="#projects"
-                        class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
-                        Portfolio</a>
-                </li>
-            </ul>
-        </div>
-        <label translate="yes" class="mr-5 md:hidden">
-            <input type="checkbox" class="hidden">
-            <div class="flex text-2xl items-center cursor-pointer ease-in-out">
-                &#9776;
-            </div>
-            <nav class="w-32 bg-[#EEEEEE] shadow-md rounded-lg p-2.5 fixed opacity-0 scale-90 ease-in-out duration-300 z-50 hidden"
-                style="margin-left: -90px;">
-                <legend
-                    class="block px-3 py-2 mb-2 bg-red-500 border border-red-500 text-white text-sm uppercase no-underline rounded transition duration-300 hover:bg-red-400 cursor-pointer">
-                    Close</legend>
-                <ul class="text-gray-800 space-y-2">
-                    <li>
-                        <a href="#projects"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
-                            Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" title="กลับสู่หน้าก่อนหน้า" role="button go back"
-                            onclick="goBack()"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
-                            Go back</a>
-                    </li>
-                </ul>
-            </nav>
-        </label>
-
-        <script>
-            document.addEventListener("scroll", function () {
-                const sections = document.querySelectorAll("section"); // ส่วนของแต่ละ section ในหน้าเว็บ
-                const navLinks = document.querySelectorAll("ul li a"); // ลิงก์ในเมนู
-
-                let currentSection = "";
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-
-                    if (window.pageYOffset >= (sectionTop - sectionHeight / 4)) {
-                        currentSection = section.getAttribute("id"); // เก็บ ID ของ section ที่อยู่ใน viewport
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove("active"); // ลบคลาส active ออกจากลิงก์ทั้งหมด
-                    if (link.getAttribute("href").includes(currentSection)) {
-                        link.classList.add("active"); // เพิ่มคลาส active ให้กับลิงก์ที่ตรงกับ section ปัจจุบัน
-                    }
-                });
-            });
-        </script>
 
     </header>
 
     <section id="projects" class="text-base pt-24 mx-5 md:mx-24 space-y-4">
         <div class="flex-wrap space-y-4 mb-20">
-            <p class="animationShow-y text-base">Types</p>
-            <div translate="no" class="flex items-center gap-1">
+            <p class="animationShow-y">Types</p>
+            <div translate="no" class="flex items-center text-sm gap-1">
                 <p class="animationShow-x uppercase border border-zinc-500 py-1 px-2 rounded-full">html</p>
                 <p class="animationShow-x uppercase border border-zinc-500 py-1 px-2 rounded-full">css</p>
                 <p class="animationShow-x uppercase border border-zinc-500 py-1 px-2 rounded-full">js</p>
@@ -145,19 +86,18 @@
                 Developing a Satisfaction Survey Website for Asia Technology College
             </h1>
         </div>
-        <p class="text-sm">Septemder 01SUN, 2024</p>
+        <p class="animationShow-x text-sm">Septemder 01SUN, 2024</p>
         <p class="animationShow-y indent-8">
             During my studies at Asia Technology College, I had the opportunity to develop a
             satisfaction survey website. The website was designed to evaluate three important student
-            projects: the "<span class="text-slate-400">Multi-Purpose Vending Machine</span>," the "<span
-                class="text-slate-400">Cricket Protein Cookies</span>," and the "<span class="text-slate-400">Laser
-                Staff Walking Stick</span>." Each of these projects showcased different skills and innovation from
-            the students.
-        </p>
+            projects: the "<span class="font-black text-gray-400">Multi-Purpose Vending Machine</span>," the "<span
+                class="font-black text-gray-400">Cricket Protein Cookies</span>," and the "<span
+                class="font-black text-gray-400">Laser Staff Walking Stick</span>." Each of these projects showcased
+            different skills and innovation from the students. </p>
         <p class="animationShow-y indent-8"">
-            For the development of this website, I used <span class=" text-slate-400">HTML</span>, <span
-                class="text-slate-400">CSS</span>,
-            and <span class="text-slate-400">JavaScript</span>
+            For the development of this website, I used <span class=" font-black text-gray-400">HTML</span>, <span
+                class="font-black text-gray-400">CSS</span>,
+            and <span class="font-black text-gray-400">JavaScript</span>
             as the main
             technologies to ensure ease of use and efficient functionality. The website was designed
             with simplicity in mind, making it user-friendly and accessible. It allows users to easily
@@ -165,16 +105,20 @@
         </p>
         <p class=" animationShow-y indent-8"">
             The website features pages where users can select the project they want to review. These
-            include the " <span class="text-slate-400">Multi-Purpose Vending Machine</span>," designed for user
-            convenience; the "<span class="text-slate-400">Cricket Protein Cookies</span>," a nutritional product made
-            from crickets; and the "<span class="text-slate-400">Laser Staff Walking Stick</span>," designed to assist
+            include the " <span class="font-black text-gray-400">Multi-Purpose Vending Machine</span>," designed for
+            user
+            convenience; the "<span class="font-black text-gray-400">Cricket Protein Cookies</span>," a nutritional
+            product made
+            from crickets; and the "<span class="font-black text-gray-400">Laser Staff Walking Stick</span>," designed
+            to assist
             individuals with visual impairments. Users can rate each project
             based on their satisfaction and submit their opinions or suggestions through <span
-                class="text-slate-400">Google Sheets</span>
+                class="font-black text-gray-400">Google Sheets</span>
             for data collection and further analysis.
         </p>
         <p class="animationShow-y indent-8"">
-            The website is now available online at <a onclick=" nextPage(this)" class=" text-[#409EFE] hover:underline"
+            The website is now available online at <a translate="no" onclick=" nextPage(this)"
+            class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
             href="https://asia-lb.web.app">
             https://asia-lb.web.app</a>. Developing this website not only enhanced my
             technical skills but also contributed to the students' ability to present their work to the public and
@@ -224,7 +168,7 @@
             <li title="Instagram">
                 <a onclick="nextPage(this)" href="https://instagram.com/centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">Instagram</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" fill="currentColor" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -241,7 +185,7 @@
             <li title="Twitter">
                 <a onclick="nextPage(this)" href="https://twitter.com/Centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">Twitter</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" fill="currentColor" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -258,7 +202,7 @@
             <li title="Linkedin">
                 <a onclick="nextPage(this)" href="https://linkedin.com/in/centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">Linkedin</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" y="0" xmlns="http://www.w3.org/2000/svg" x="0"
                             width="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" height="100">
@@ -275,7 +219,7 @@
             <li title="GitHub">
                 <a onclick="nextPage(this)" href="https://github.com/centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">GitHub</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" fill="currentColor" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -296,7 +240,7 @@
                 document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");
             </script>
         </p>
-        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.0.0</span></p>
+        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.1.1</span></p>
         <p class="first-letter:text-[#409EFE] truncate">
             <script>document.write("&copy; " + (new Date().getFullYear()))</script>
             <span title="Centered101 website" class="text-[#409EFE] underline-offset-1">

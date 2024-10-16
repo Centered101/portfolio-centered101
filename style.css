@@ -81,7 +81,7 @@
         display: none;
     }
 
-    @media (max-width: 640px) {
+    /* @media (max-width: 640px) { */
 
         /* From Uiverse.io by jeremyssocial */
         .container {
@@ -107,7 +107,7 @@
             }
         }
 
-    }
+    /* } */
 
     /* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
 

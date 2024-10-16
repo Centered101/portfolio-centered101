@@ -1,36 +1,28 @@
 function nextPage(link) {
     // ปิดการใช้งานลิงก์
-    link.style.pointerEvents = 'none';
-    link.style.opacity = '0.5'; // ทำให้ลิงก์ดูจางลงเพื่อแสดงว่าไม่สามารถคลิกได้
-    link.style.cursor = 'default'; // เปลี่ยน cursor ให้ไม่แสดงเป็นรูปมือเมื่อ hover
-    link.style.display = 'none'; // ซ่อนลิงก์
-
-    document.body.style.backgroundColor = "#121212"
-    document.querySelector("header").style.display = "none";
-    document.querySelector("footer").style.display = "none";
-    document.querySelectorAll("section").forEach(function (section) {
-        section.style.display = "none";
-    });
-    document.querySelector(".sticky").style.display = "none";
-    document.getElementById("loader").style.display = "flex";
-
+    link.style.opacity = '0.5'; // ทำให้ลิงก์ดูจางลง
+    link.style.cursor = 'default'; // เปลี่ยน cursor ให้เป็นค่า default (ไม่แสดงมือเมื่อ hover)
+    link.style.pointerEvents = 'none'; // ปิดการทำงานของลิงก์ ไม่ให้สามารถคลิกได้
     setTimeout(function () {
-        // ปิดการใช้งานลิงก์
-        link.style.pointerEvents = 'block';
-        link.style.opacity = '0.5'; // ทำให้ลิงก์ดูจางลงเพื่อแสดงว่าไม่สามารถคลิกได้
-        link.style.cursor = 'default'; // เปลี่ยน cursor ให้ไม่แสดงเป็นรูปมือเมื่อ hover
-        link.style.display = 'block'; // ซ่อนลิงก์
-
-        document.body.style.backgroundColor = "#121212"
-        document.querySelector("header").style.display = "flex";
-        document.querySelector("footer").style.display = "grid";
-        document.querySelectorAll("section").forEach(function (section) {
-            section.style.display = "block";
-        });
-        document.querySelector(".sticky").style.display = "flex";
-        document.getElementById("loader").style.display = "none";
-    }, 5000);
+        link.style.opacity = '1';
+        link.style.cursor = 'pointer';
+        link.style.pointerEvents = 'auto';
+    }, 3000);
 }
+
+// เลือกทุกแท็ก <a> ใน div ที่มีคลาส 'animationShow-y'
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+    // ตรวจสอบว่า href ของแท็ก <a> ว่างหรือไม่
+    if (!link.getAttribute('href') || link.getAttribute('href') === '#') {
+        // ถ้า href ว่าง ให้ปิดการใช้งานการคลิก
+        link.classList.add('cursor-default');
+        link.onclick = (event) => {
+            event.preventDefault(); // ป้องกันการทำงานของลิงค์
+        };
+    }
+});
 
 // ————————————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -52,6 +44,7 @@ function goBack() {
         document.querySelectorAll("section").forEach(function (section) {
             section.style.display = "block";
         });
+        document.getElementById("home").style.display = "grid";
         document.querySelector(".sticky").style.display = "flex";
         document.getElementById("loader").style.display = "none";
     }, 5000);

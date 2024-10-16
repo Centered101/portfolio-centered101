@@ -42,6 +42,25 @@
 </style> -->
 
 <body class="text-sm font-sans text-zinc-500 bg-gradient-to-b from-[#121212] to-gray-900">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // เลือก progress bar ด้านใน
+            var progressBar = document.getElementById('progressbar');
+
+            // เริ่มการทำงานโดยการเปลี่ยนค่าความกว้างและความโปร่งแสง
+            setTimeout(function () {
+                progressBar.style.width = "100%";  // เปลี่ยนความกว้างเป็น 100%
+                progressBar.style.opacity = "1";   // แสดง progress bar
+            }, 100); // เริ่มการโหลดหลังจาก 100 มิลลิวินาที
+
+            // เมื่อโหลดเสร็จสิ้นแล้วซ่อนแถบโหลด
+            setTimeout(function () {
+                progressBar.style.opacity = "0";   // ซ่อน progress bar เมื่อโหลดเสร็จ
+            }, 2500); // ซ่อนหลังจาก 2.5 วินาที
+        });
+
+        document.write('<div id="progressbar" role="progressbar" aria-hidden="true" class="fixed inset-x-0 top-0 left-0 z-50 h-2 lg:h-4 animate-pulse"><div class="h-full bg-gradient-to-r from-[#84D4FA] to-[#409EFE] transition-all duration-500 ease-in-out w-0 opacity-0 transition-none"></div></div>');
+    </script>
     <div id="loader" class="hidden flex-row justify-center items-center fixed inset-0 gap-2">
         <div class="w-4 h-4 rounded-full bg-[#409EFE] animate-bounce"></div>
         <div class="w-4 h-4 rounded-full bg-[#409EFE] animate-bounce [animation-delay:-.3s]"></div>
@@ -69,34 +88,34 @@
         <div translate="yes" class="items-center hidden md:flex">
             <ul class="flex gap-2 text-white">
                 <li translate="no">
-                    <a title="Home" href="#home"
+                    <a onclick="nextPage(this)" title="Home" href="#home"
                         class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
                         Home</a>
                 </li>
                 <li>
-                    <a title="What I do" href="#service"
+                    <a onclick="nextPage(this)" title="What I do" href="#service"
                         class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
                         What I do</a>
                 </li>
                 <li class="group">
-                    <a title="About" href="#about"
+                    <a onclick="nextPage(this)" title="About" href="#about"
                         class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
                         About</a>
                     <ul class="absolute pt-4 space-y-2 hidden group-hover:block group-focus:block">
                         <li>
-                            <a title="Skills" href="#skills"
+                            <a onclick="nextPage(this)" title="Skills" href="#skills"
                                 class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
                                 Skills</a>
                         </li>
                         <li>
-                            <a title="Experience" href="#experience"
+                            <a onclick="nextPage(this)" title="Experience" href="#experience"
                                 class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
                                 Experience</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a title="Portfolio" href="#projects"
+                    <a onclick="nextPage(this)" title="Portfolio" href="#projects"
                         class="block w-20 p-1 text-center no-underline truncate rounded transition duration-300 border hover:bg-white hover:text-black">
                         Portfolio</a>
                 </li>
@@ -114,33 +133,35 @@
                     Close</legend>
                 <ul class="text-gray-800 space-y-2">
                     <li translate="no">
-                        <a title="Home" href="#home"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
+                        <a onclick="nextPage(this)" title="Home" href="#home"
+                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded-r transition duration-300 border-l-2 border-black hover:border-[#409EFE] hover:bg-white hover:text-black">
                             Home</a>
                     </li>
                     <li>
-                        <a title="What I do" href="#service"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
+                        <a onclick="nextPage(this)" title="What I do" href="#service"
+                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded-r transition duration-300 border-l-2 border-black hover:border-[#409EFE] hover:bg-white hover:text-black">
                             What I do</a>
                     </li>
                     <li>
-                        <a title="About" href="#about"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
+                        <a onclick="nextPage(this)" title="About" href="#about"
+                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded-r transition duration-300 border-l-2 border-black hover:border-[#409EFE] hover:bg-white hover:text-black">
                             About</a>
                     </li>
-                    <li class="ml-3">
-                        <a title="Skills" href="#skills"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
-                            Skills</a>
-                    </li>
-                    <li class="ml-3">
-                        <a title="Experience" href="#experience"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
-                            Experience</a>
-                    </li>
+                    <ul class="pl-3 space-y-2 border-l border-black">
+                        <li>
+                            <a onclick="nextPage(this)" title="Skills" href="#skills"
+                                class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded-r transition duration-300 border-l-2 border-black hover:border-[#409EFE] hover:bg-white hover:text-black">
+                                Skills</a>
+                        </li>
+                        <li>
+                            <a onclick="nextPage(this)" title="Experience" href="#experience"
+                                class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded-r transition duration-300 border-l-2 border-black hover:border-[#409EFE] hover:bg-white hover:text-black">
+                                Experience</a>
+                            </li=>
+                    </ul>
                     <li>
-                        <a title="Portfolio" href="#projects"
-                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded transition duration-300 border-l-2 border-black hover:bg-white hover:text-black">
+                        <a onclick="nextPage(this)" title="Portfolio" href="#projects"
+                            class="block bg-[#D7D7D7] px-3 py-2 no-underline truncate rounded-r transition duration-300 border-l-2 border-black hover:border-[#409EFE] hover:bg-white hover:text-black">
                             Portfolio</a>
                     </li>
                 </ul>
@@ -187,7 +208,7 @@
                         </ul>
                     </nav>
                 </label>
-                <a title="Contact me" href="https://instagram.com/centered101/" target="_blank" onclick="nextPage(this)"
+                <a onclick="nextPage(this)" title="Contact me" href="https://instagram.com/centered101/" target="_blank"
                     class="bg-transparent text-center hover:bg-white text-white hover:text-black border border-white rounded-lg w-40 p-4 underline underline-offset-4 outline-0 duration-300">
                     Hire Me <span class="text-[#FE4040]">!</span></a>
             </div>
@@ -208,9 +229,8 @@
             <img class="object-cover md:w-96 md:absolute bottom-0 brightness-[75%] -z-10"
                 src="https://project-test-submission.web.app/images/IMG_20240618_124220_628_edit_378309509291752.png"
                 draggable="false" oncontextmenu="return false;" alt="image">
-            <!-- <img src="/lottieflow-background-07-000000-easey.json" alt="image"> -->
             <div
-                class="absolute left-5 bottom-72 sm:left-5 md:bottom-72 md:left-2/4 backdrop-blur-sm border-4 border-[#409EFE] rounded-xl shadow-md text-slate-300 px-4 py-2 flex items-center gap-2 -z-20">
+                class="absolute bottom-72 left-5 sm:bottom-72 sm:left-5 md:bottom-72 md:left-2/4 lg:left-3/4 backdrop-blur rounded-xl shadow-md text-slate-300 px-4 py-2 flex items-center gap-2 -z-20">
                 <p class="text-6xl font-black">
                     <script>document.write((new Date().getFullYear() - 2018))</script>
                 </p>
@@ -223,11 +243,10 @@
     </section>
     <!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
     <section id="service" class="mx-5 pt-24">
-
         <div class="w-4/5 mx-auto space-y-3">
-            <div class="flex justify-center">
+            <div onclick="nextPage(this)" class="flex justify-center">
                 <div
-                    class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-white duration-500">
+                    class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-slate-300 duration-500">
                     <svg class="w-3 fill-[#409EFE]" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M226-160q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226-414q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226-668q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Z">
@@ -515,9 +534,9 @@
     <!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
     <section id="about" class="pt-24 px-4 sm:px-6 lg:px-8">
         <div class="space-y-3">
-            <div class="flex justify-center">
+            <div onclick="nextPage(this)" class="flex justify-center">
                 <div
-                    class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-white duration-500">
+                    class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-slate-300 duration-500">
                     <svg class="w-3 fill-[#409EFE]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd"
                             d="m11.9572 4.31201c-3.35401 0-6.00906 2.59741-6.00906 5.67742v3.29037c0 .1986-.05916.3927-.16992.5576l-1.62529 2.4193-.01077.0157c-.18701.2673-.16653.5113-.07001.6868.10031.1825.31959.3528.67282.3528h14.52603c.2546 0 .5013-.1515.6391-.3968.1315-.2343.1117-.4475-.0118-.6093-.0065-.0085-.0129-.0171-.0191-.0258l-1.7269-2.4194c-.121-.1695-.186-.3726-.186-.5809v-3.29037c0-1.54561-.6851-3.023-1.7072-4.00431-1.1617-1.01594-2.6545-1.67311-4.3019-1.67311zm-8.00906 5.67742c0-4.27483 3.64294-7.67742 8.00906-7.67742 2.2055 0 4.1606.88547 5.6378 2.18455.01.00877.0198.01774.0294.02691 1.408 1.34136 2.3419 3.34131 2.3419 5.46596v2.97007l1.5325 2.1471c.6775.8999.6054 1.9859.1552 2.7877-.4464.795-1.3171 1.4177-2.383 1.4177h-14.52603c-2.16218 0-3.55087-2.302-2.24739-4.1777l1.45056-2.1593zm4.05187 11.32257c0-.5523.44772-1 1-1h5.99999c.5523 0 1 .4477 1 1s-.4477 1-1 1h-5.99999c-.55228 0-1-.4477-1-1z"
@@ -533,7 +552,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
                 <!-- Image Section -->
                 <div class="md:sticky md:top-[120px] flex flex-col items-center gap-4">
-                    <div class="relative group w-full md:w-64 h-72 md:h-64">
+                    <div class="relative group w-full h-72 md:w-72">
                         <img class="animationShow w-full h-full object-cover object-center md:group-hover:object-[center_-700px] md:group-hover:object-none shadow-lg md:rounded-full border-2 border-zinc-500 p-2 rounded-md transition-all ease-linear duration-300 brightness-[75%] contrast-75"
                             src="https://project-test-submission.web.app/images/received_1684294808666533.jpeg"
                             draggable="false" oncontextmenu="return false;" alt="Profile Image">
@@ -563,16 +582,16 @@
 
                     </script>
 
-                    <img class="animationShow backdrop-blur-sm border-2 border-zinc-500 rounded-2xl p-2 w-20 absolute -mt-[20px] mr-[350px] rotate-12 md:mr-[200px]"
+                    <img class="animationShow backdrop-blur border-2 border-zinc-500 rounded-2xl p-2 w-20 absolute -mt-[20px] mr-[350px] rotate-12 md:mr-[200px]"
                         src="https://portfolio.patta.dev/assets/imgs/header/Go-Logo_Blue.png" draggable="false"
                         oncontextmenu="return false;" alt="Go">
-                    <img class="animationShow backdrop-blur-sm border-2 border-zinc-500 rounded-2xl p-4 w-16 absolute -mt-[50px] ml-[300px] blur-[3px] rotate-12 md:-mt-[30px] md:ml-[150px] -z-10"
+                    <img class="animationShow backdrop-blur border-2 border-zinc-500 rounded-2xl p-4 w-16 absolute -mt-[50px] ml-[300px] blur-[3px] rotate-12 md:-mt-[30px] md:ml-[150px] -z-10"
                         src="https://portfolio.patta.dev/assets/imgs/header/267_Python-512.webp" draggable="false"
                         oncontextmenu="return false;" alt="Python">
-                    <img class="animationShow backdrop-blur-sm border-2 border-zinc-500 rounded-2xl p-4 w-16 absolute mt-[180px] mr-[350px] -rotate-12 md:ml-[180px]"
+                    <img class="animationShow backdrop-blur border-2 border-zinc-500 rounded-2xl p-4 w-16 absolute mt-[180px] mr-[350px] -rotate-12 md:ml-[100px]"
                         src="https://portfolio.patta.dev/assets/imgs/header/flutter-icon-2048x2048-ufx4idi8.png"
                         draggable="false" oncontextmenu="return false;" alt="flutter">
-                    <img class="animationShow backdrop-blur-sm border-2 border-zinc-500 rounded-2xl p-4 w-16 absolute mt-[250px] ml-[300px] -rotate-12 md:mt-[100px] md:ml-[270px]"
+                    <img class="animationShow backdrop-blur border-2 border-zinc-500 rounded-2xl p-4 w-16 absolute mt-[250px] ml-[300px] -rotate-12 md:mt-[100px] md:ml-[270px]"
                         src="https://portfolio.patta.dev/assets/imgs/header/docker-icon.png" draggable="false"
                         oncontextmenu="return false;" alt="docker">
                     <div
@@ -592,42 +611,34 @@
                                 <a onclick="nextPage(this)" title="centered101@outlook.com"
                                     href="mailto:centered101@outlook.com" class="hover:underline uppercase"
                                     aria-label="Email centered101 at outlook.com">
-                                    <p>
-                                        <span>centered101</span>
-                                        <span class="text-[#409EFE]">@</span>
-                                        <span>outlook</span>
-                                        <span class="text-[#409EFE]">. com</span>
-                                    </p>
+                                    <span>centered101</span><span
+                                        class="text-[#409EFE]">@</span><span>outlook</span><span
+                                        class="text-[#409EFE]">.com</span>
                                 </a>
                             </li>
                             <li>
                                 <a onclick="nextPage(this)" title="centered101@hotmail.com"
                                     href="mailto:centered101@hotmail.com" class="hover:underline uppercase"
                                     aria-label="Email centered101 at hotmail.com">
-                                    <span>centered101</span>
-                                    <span class="text-[#409EFE]">@</span>
-                                    <span>hotmail</span>
-                                    <span class="text-[#409EFE]">. com</span>
+                                    <span>centered101</span><span
+                                        class="text-[#409EFE]">@</span><span>hotmail</span><span
+                                        class="text-[#409EFE]">.com</span>
                                 </a>
                             </li>
                             <li>
                                 <a onclick="nextPage(this)" title="mailto:36887@pranarai.ac.th"
                                     href="mailto:36887@pranarai.ac.th" class="hover:underline uppercase"
                                     aria-label="Email 36887 at pranarai.ac.th">
-                                    <span>36887</span>
-                                    <span class="text-[#409EFE]">@</span>
-                                    <span>pranarai</span>
-                                    <span class="text-[#409EFE]">. ac . th</span>
+                                    <span>36887</span><span class="text-[#409EFE]">@</span><span>pranarai</span><span
+                                        class="text-[#409EFE]">.ac.th</span>
                                 </a>
                             </li>
                             <li>
                                 <a onclick="nextPage(this)" title="centered101@dev.com"
                                     href="mailto:centered101@dev.com" class="hover:underline uppercase"
                                     aria-label="Email centered101 at dev.com">
-                                    <span>centered101</span>
-                                    <span class="text-[#409EFE]">@</span>
-                                    <span>dev</span>
-                                    <span class="text-[#409EFE]">. com</span>
+                                    <span>centered101</span><span class="text-[#409EFE]">@</span><span>dev</span><span
+                                        class="text-[#409EFE]">.com</span>
                                 </a>
                             </li>
                         </ul>
@@ -668,9 +679,9 @@
                     </div>
                     <!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
                     <div id="skills" class="w-4/5 mx-auto md:w-full pt-24 text-sm">
-                        <div class="flex justify-center">
+                        <div onclick="nextPage(this)" class="flex justify-center">
                             <div
-                                class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-white duration-500">
+                                class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-slate-300 duration-500">
                                 <svg class="w-3 fill-[#409EFE]" viewBox="0 0 640 512"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -797,9 +808,9 @@
                     </div>
                     <!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
                     <div id="experience" class="md:w-full pt-24">
-                        <div class="flex justify-center">
+                        <div onclick="nextPage(this)" class="flex justify-center">
                             <div
-                                class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-white duration-500">
+                                class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-slate-300 duration-500">
                                 <svg class="w-3 fill-[#409EFE]" viewBox="0 -960 960 960"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -815,7 +826,7 @@
                         <p class="text-sm text-slate-300 text-center">My Resume</p>
                         <ul
                             class="grid gap-8 list-disc marker:text-[#409EFE] marker:text-2xl border-l-2 border-zinc-500 p-4 my-8">
-                            <li class="mt-4 space-y-2">
+                            <!-- <li class="mt-4 space-y-2">
                                 <div class="flex">
                                     <div
                                         class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 px-2 rounded-full hover:border-white duration-500">
@@ -948,8 +959,8 @@
                                     the
                                     application. which is developed with Flutter
                                 </p>
-                            </li>
-                            <li class="mt-4 space-y-2">
+                            </li> -->
+                            <!-- <li class="mt-4 space-y-2">
                                 <div class="flex">
                                     <div
                                         class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 px-2 rounded-full duration-500">
@@ -972,7 +983,7 @@
                                     system
                                     running on NodeJS
                                 </p>
-                            </li>
+                            </li> -->
                             <li class="mt-4 space-y-2">
                                 <div class="flex">
                                     <div
@@ -982,20 +993,18 @@
                                             <path
                                                 d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z" />
                                         </svg>
-                                        April 2023
+                                        in 2024
                                     </div>
                                 </div>
-                                <p class="animationShow-y text-base text-slate-300">Web Development</p>
-                                <p class="animationShow-y text-xs">[ Srinakharinwirot University ]</p>
-                                <p class="animationShow-y text-sm indent-8">Develop a website for the Kartik game, which
-                                    is a
-                                    Davinci
-                                    game of guessing words from pictures. It is developed as a project submitted
-                                    within
-                                    the Web Design subject, developed with NodeJS Express and has a Web Socket
-                                    for
-                                    sending data in real time. You can view the work. at
-                                    https://cpe221.patta.dev
+                                <p class="animationShow-y text-base text-slate-300">Transitioning to Web Development in
+                                    2024</p>
+                                <!-- <p class="animationShow-y text-xs"></p> -->
+                                <p class="animationShow-y text-sm indent-8">In 2024, I was studying for a Vocational
+                                    Certificate in Mechanical Engineering, a path I chose because followed others.
+                                    However, over time, I realized that coding and web development was
+                                    a much better fit for me. It sparked my passion and allowed me to create meaningful
+                                    things. Therefore, I decided to leave the mechanical path and focus seriously on
+                                    learning how to code and build websites, following my true dream.
                                 </p>
                             </li>
                             <li class="mt-4 space-y-2">
@@ -1007,20 +1016,27 @@
                                             <path
                                                 d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z" />
                                         </svg>
-                                        March 2023
+                                        in 2023
                                     </div>
                                 </div>
-                                <p class="animationShow-y text-base text-slate-300">App Development</p>
-                                <p class="animationShow-y text-xs">[ Srinakharinwirot University ]</p>
-                                <p class="animationShow-y text-sm indent-8">Developed the My SOS application, an
-                                    application
-                                    that
-                                    collects emergency phone numbers for Thai people. and search for information
-                                    on
-                                    medical facilities near the user Including recording personal information
-                                    for
-                                    emergency use in the event of an accident, developed with the Flutter
-                                    Framework.
+                                <p class="animationShow-y text-base text-slate-300">My Blog Development Journey from
+                                    Mathayom 3</p>
+                                <!-- <p class="animationShow-y text-xs"></p> -->
+                                <p class="animationShow-y text-sm indent-8">I began developing my blog seriously since I
+                                    was in 9th grade. My first blog was
+                                    <a translate="no" onclick=" nextPage(this)"
+                                        class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
+                                        href="https://centered101-webfollow.web.app/">centered101-webfollow.web.app</a>,
+                                    which marked an
+                                    important milestone in my journey into programming and web development.
+                                </p>
+                                <p class="animationShow-y text-sm indent-8">
+                                    Today, I've launched a more modern version of the blog, now officially available at
+                                    <a translate="no" onclick=" nextPage(this)"
+                                        class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
+                                        href="https://centered101.netlify.app/"> centered1101.netlify.app</a>
+                                    This new site continues to reflect my dedication to
+                                    creating a blog that meets user needs effectively.
                                 </p>
                             </li>
                             <li class="mt-4 space-y-2">
@@ -1032,16 +1048,21 @@
                                             <path
                                                 d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z" />
                                         </svg>
-                                        August 2019
+                                        in 2020
                                     </div>
                                 </div>
-                                <p class="animationShow-y text-base text-slate-300">Web Front-end Development</p>
-                                <p class="animationShow-y text-xs">[ E-TECH ]</p>
-                                <p class="animationShow-y text-sm indent-8">Won the website creation competition at the
-                                    19th
-                                    Etech
-                                    Fair
-                                    by creating a website with HTML CSS and JS.
+                                <p class="animationShow-y text-base text-slate-300">The first programming language</p>
+                                <p class="animationShow-y text-xs"></p>
+                                <p class="animationShow-y text-sm indent-8">
+                                    The first programming language I learned was Python, and I imported Turtle for my
+                                    initial coding. I created my first HTML project on <a translate="no"
+                                        onclick=" nextPage(this)"
+                                        class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
+                                        href="https://project-test-submission.web.app/PROJECTS_ALL/Quay.html">project-test-submission.web.app/PROJECTS_ALL/Quay</a>
+                                    during the COVID-19 pandemic, when I had to study online from home. At the time, I
+                                    didn't know much about styling HTML. It was a very boring period, so I started
+                                    experimenting with code without any formal learning. My motivation was a desire to
+                                    become a hacker, which sparked my curiosity and led me to explore coding on my own.
                                 </p>
                             </li>
                             <li class="mt-4 space-y-2">
@@ -1053,17 +1074,18 @@
                                             <path
                                                 d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z" />
                                         </svg>
-                                        April 2018
+                                        in 2019
                                     </div>
                                 </div>
-                                <p class="animationShow-y text-base text-slate-300">Web Development</p>
-                                <p class="animationShow-y text-xs">[ OBEC TH ]</p>
-                                <p class="animationShow-y text-sm indent-8">Crafting Web application with PHP and MqSQL
-                                    for
-                                    manage
-                                    school certificate. and i'have won the national competition at the first
-                                    place.
+                                <p class="animationShow-y text-base text-slate-300">My Dream of Becoming a Programmer
                                 </p>
+                                <!-- <p class="animationShow-y text-xs"></p> -->
+                                <p class="animationShow-y text-sm indent-8">In 6th grade, playing Minecraft with my best
+                                    friend inspired me to become a programmer. We loved building and exploring in the
+                                    game, which made me realize the potential of creating something bigger. This passion
+                                    drives me to learn programming, and I hope to one day develop games. Minecraft
+                                    taught me that being a programmer is not just about coding, but about creativity,
+                                    and it continues to fuel my dream of working in game development.</p>
                             </li>
                         </ul>
                     </div>
@@ -1074,9 +1096,9 @@
     <!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
     <section id="projects" class="mx-5 pt-24">
         <div class="space-y-3">
-            <div class="flex justify-center">
+            <div onclick="nextPage(this)" class="flex justify-center">
                 <div
-                    class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-white duration-500">
+                    class="animationShow-x flex items-center justify-center gap-2 uppercase text-xs text-zinc-500 leading-relaxed text-center border border-zinc-500 py-1 px-2 rounded-full hover:border-slate-300 duration-500">
                     <svg class="w-3 fill-[#409EFE]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
                         <path
                             d="M26.153 11.46a6.888 6.888 0 0 0-.608-5.73 7.117 7.117 0 0 0-3.29-2.93 7.238 7.238 0 0 0-4.41-.454 7.065 7.065 0 0 0-2.41-1.742A7.15 7.15 0 0 0 12.514 0a7.216 7.216 0 0 0-4.217 1.346 7.061 7.061 0 0 0-2.603 3.539 7.12 7.12 0 0 0-2.734 1.188A7.012 7.012 0 0 0 .966 8.268a6.979 6.979 0 0 0 .88 8.273 6.89 6.89 0 0 0 .607 5.729 7.117 7.117 0 0 0 3.29 2.93 7.238 7.238 0 0 0 4.41.454 7.061 7.061 0 0 0 2.409 1.742c.92.404 1.916.61 2.923.604a7.215 7.215 0 0 0 4.22-1.345 7.06 7.06 0 0 0 2.605-3.543 7.116 7.116 0 0 0 2.734-1.187 7.01 7.01 0 0 0 1.993-2.196 6.978 6.978 0 0 0-.884-8.27Zm-10.61 14.71c-1.412 0-2.505-.428-3.46-1.215.043-.023.119-.064.168-.094l5.65-3.22a.911.911 0 0 0 .464-.793v-7.86l2.389 1.36a.087.087 0 0 1 .046.065v6.508c0 2.952-2.491 5.248-5.257 5.248ZM4.062 21.354a5.17 5.17 0 0 1-.635-3.516c.042.025.115.07.168.1l5.65 3.22a.928.928 0 0 0 .928 0l6.898-3.93v2.72a.083.083 0 0 1-.034.072l-5.711 3.255a5.386 5.386 0 0 1-4.035.522 5.315 5.315 0 0 1-3.23-2.443ZM2.573 9.184a5.283 5.283 0 0 1 2.768-2.301V13.515a.895.895 0 0 0 .464.793l6.897 3.93-2.388 1.36a.087.087 0 0 1-.08.008L4.52 16.349a5.262 5.262 0 0 1-2.475-3.185 5.192 5.192 0 0 1 .527-3.98Zm19.623 4.506-6.898-3.93 2.388-1.36a.087.087 0 0 1 .08-.008l5.713 3.255a5.28 5.28 0 0 1 2.054 2.118 5.19 5.19 0 0 1-.488 5.608 5.314 5.314 0 0 1-2.39 1.742v-6.633a.896.896 0 0 0-.459-.792Zm2.377-3.533a7.973 7.973 0 0 0-.168-.099l-5.65-3.22a.93.93 0 0 0-.928 0l-6.898 3.93V8.046a.083.083 0 0 1 .034-.072l5.712-3.251a5.375 5.375 0 0 1 5.698.241 5.262 5.262 0 0 1 1.865 2.28c.39.92.506 1.93.335 2.913ZM9.631 15.009l-2.39-1.36a.083.083 0 0 1-.046-.065V7.075c.001-.997.29-1.973.832-2.814a5.297 5.297 0 0 1 2.231-1.935 5.382 5.382 0 0 1 5.659.72 4.89 4.89 0 0 0-.168.093l-5.65 3.22a.913.913 0 0 0-.465.793l-.003 7.857Zm1.297-2.76L14 10.5l3.072 1.75v3.5L14 17.499l-3.072-1.75v-3.5Z">
@@ -1095,11 +1117,11 @@
 
             <div
                 class="relative flex flex-col rounded-xl bg-gradient-to-t from-[#121212] to-gray-900 text-gray-600 border border-[#409EFE] shadow-md group/card">
-                <div
+                <a onclick="nextPage(this)" href="./portfolio-project-develop-a-satisfaction-survey-website.html"
                     class="animationShow-y relative sm:-mt-5 sm:mx-5 h-52 border border-[#409EFE] rounded-xl shadow-lg bg-[#121212] transition-all duration-1000 brightness-[75%]">
                     <img class=" m-auto h-full" src="https://project-test-submission.web.app/images/logo3.ico"
                         draggable="false" oncontextmenu="return false;" alt="Project 2" />
-                </div>
+                </a>
                 <div class=" p-5 text-sm">
                     <p class="animationShow-y">Septemder 01SUN, 2024</p>
                     <p class="animationShow-y truncate text-xl font-semibold leading-snug text-blue-gray-900">
@@ -1152,11 +1174,11 @@
 
             <div
                 class="relative flex flex-col rounded-xl bg-gradient-to-t from-[#121212] to-gray-900 text-gray-600 border border-[#409EFE] shadow-md group/card">
-                <div
-                    class="animationShow-y relative sm:-mt-5 sm:mx-5 h-52 border border-[#409EFE] rounded-xl shadow-lg bg-[#121212] transition-all duration-1000 brightness-[75%]">
+                <a onclick="nextPage(this)" href="./portfolio-project-listing-directory.html"
+                    class="animationShow-y bg-fixed relative sm:-mt-5 sm:mx-5 h-52 border border-[#409EFE] rounded-xl shadow-lg bg-[#121212] transition-all duration-1000 brightness-[75%]">
                     <img class=" m-auto h-full" src="https://centered101.netlify.app/images/Tes-D.png" draggable="false"
                         oncontextmenu="return false;" alt="Project 2" />
-                </div>
+                </a>
                 <div class="p-5 text-sm">
                     <p class="animationShow-y">August 18SUN, 20244</p>
                     <p class="animationShow-y truncate text-xl font-semibold leading-snug text-blue-gray-900">
@@ -1236,7 +1258,7 @@
             <li title="Instagram">
                 <a onclick="nextPage(this)" href="https://instagram.com/centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">Instagram</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" fill="currentColor" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -1253,7 +1275,7 @@
             <li title="Twitter">
                 <a onclick="nextPage(this)" href="https://twitter.com/Centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">Twitter</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" fill="currentColor" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -1270,7 +1292,7 @@
             <li title="Linkedin">
                 <a onclick="nextPage(this)" href="https://linkedin.com/in/centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">Linkedin</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" y="0" xmlns="http://www.w3.org/2000/svg" x="0"
                             width="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" height="100">
@@ -1287,7 +1309,7 @@
             <li title="GitHub">
                 <a onclick="nextPage(this)" href="https://github.com/centered101/">
                     <div
-                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 dark:hover:bg-red-400 relative bg-[#409EFE] dark:bg-[#FE4040] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
+                        class="group w-12 hover:w-44 h-12 hover:bg-blue-300 relative bg-[#409EFE] rounded text-neutral-50 duration-700 font-bold flex justify-start gap-2 items-center p-2">
                         <span class="sr-only">GitHub</span>
                         <svg class="w-8 h-8 shrink-0 fill-neutral-50" fill="currentColor" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -1308,7 +1330,7 @@
                 document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");
             </script>
         </p>
-        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.0.0</span></p>
+        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.1.1</span></p>
         <p class="first-letter:text-[#409EFE] truncate">
             <script>document.write("&copy; " + (new Date().getFullYear()))</script>
             <span title="Centered101 website" class="text-[#409EFE] underline-offset-1">

@@ -227,12 +227,12 @@
                 src="https://portfolio.patta.dev/assets/imgs/serv-img/4.png" draggable="false"
                 oncontextmenu="return false;" alt="">
             <img class="object-cover md:w-96 md:absolute bottom-0 brightness-[75%] -z-10"
-                src="https://project-test-submission.web.app/images/IMG_20240618_124220_628_edit_378309509291752.png"
-                draggable="false" oncontextmenu="return false;" alt="image">
+                src="https://project-test-submission.web.app/images/profile-portfolio.png" draggable="false"
+                oncontextmenu="return false;" alt="image">
             <div
                 class="absolute bottom-72 left-5 sm:bottom-72 sm:left-5 md:bottom-72 md:left-2/4 lg:left-3/4 backdrop-blur rounded-xl shadow-md text-slate-300 px-4 py-2 flex items-center gap-2 -z-20">
                 <p class="text-6xl font-black">
-                    <script>document.write((new Date().getFullYear() - 2018))</script>
+                    <script>document.write((new Date().getFullYear() - 2020))</script>
                 </p>
                 <div>
                     <p>Years of</p>
@@ -554,8 +554,8 @@
                 <div class="md:sticky md:top-[120px] flex flex-col items-center gap-4">
                     <div class="relative group w-full h-72 md:w-72">
                         <img class="animationShow w-full h-full object-cover object-center md:group-hover:object-[center_-700px] md:group-hover:object-none shadow-lg md:rounded-full border-2 border-zinc-500 p-2 rounded-md transition-all ease-linear duration-300 brightness-[75%] contrast-75"
-                            src="https://project-test-submission.web.app/images/received_1684294808666533.jpeg"
-                            draggable="false" oncontextmenu="return false;" alt="Profile Image">
+                            src="https://project-test-submission.web.app/images/ง่วงนอนเวลาเรียน.jpeg" draggable="false"
+                            oncontextmenu="return false;" alt="Profile Image">
                         <span id="hoverText"
                             class="absolute select-none inset-0 flex items-center justify-center bg-black bg-opacity-50 text-center text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md md:rounded-full">
                             Don't have a picture to add, so take this one first.
@@ -1325,20 +1325,21 @@
             </li>
         </ul>
 
-        <p class="truncate">
-            <script>
-                document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");
-            </script>
-        </p>
-        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.1.1</span></p>
+        <script>document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");</script>
+        <p class="first-letter:text-[#409EFE] truncate">Version: <span id="version"></span></p>
         <p class="first-letter:text-[#409EFE] truncate">
             <script>document.write("&copy; " + (new Date().getFullYear()))</script>
             <span title="Centered101 website" class="text-[#409EFE] underline-offset-1">
-                <a onclick="nextPage(this)" href="https://centered101.netlify.app/">Centered101</a>
+                <a href="https://centered101.netlify.app/">Centered101</a>
             </span>— All Rights Reserved.
         </p>
     </footer>
+
 </body>
 <script src="script.js"></script>
+<script src="https://project-test-submission.web.app/script/path/to/version.js"></script>
+<script>
+    document.getElementById('version').textContent = appVersionPortfolio;
+</script>
 
 </html>

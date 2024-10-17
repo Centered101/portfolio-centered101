@@ -117,7 +117,7 @@
             for data collection and further analysis.
         </p>
         <p class="animationShow-y indent-8"">
-            The website is now available online at <a translate="no" onclick=" nextPage(this)"
+            The website is now available online at <a translate=" no" onclick=" nextPage(this)"
             class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
             href="https://asia-lb.web.app">
             https://asia-lb.web.app</a>. Developing this website not only enhanced my
@@ -235,20 +235,21 @@
             </li>
         </ul>
 
-        <p class="truncate">
-            <script>
-                document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");
-            </script>
-        </p>
-        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.1.1</span></p>
+        <script>document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");</script>
+        <p class="first-letter:text-[#409EFE] truncate">Version: <span id="version"></span></p>
         <p class="first-letter:text-[#409EFE] truncate">
             <script>document.write("&copy; " + (new Date().getFullYear()))</script>
             <span title="Centered101 website" class="text-[#409EFE] underline-offset-1">
-                <a onclick="nextPage(this)" href="https://centered101.netlify.app/">Centered101</a>
+                <a href="https://centered101.netlify.app/">Centered101</a>
             </span>— All Rights Reserved.
         </p>
     </footer>
+
 </body>
 <script src="script.js"></script>
+<script src="https://project-test-submission.web.app/script/path/to/version.js"></script>
+<script>
+    document.getElementById('version').textContent = appVersionPortfolio;
+</script>
 
 </html>

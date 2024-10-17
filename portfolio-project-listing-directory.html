@@ -168,7 +168,8 @@
         </p>
         <p class="animationShow-y indent-8">
             The website is currently available at
-            <a translate="no" onclick="nextPage(this)" class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
+            <a translate="no" onclick="nextPage(this)"
+                class="text-[#409EFE] hover:underline decoration-zinc-500 after:content-['_↗']"
                 href="https://project-test-submission.web.app">https://project-test-submission.web.app</a>, offering a
             convenient platform
             for trial software distribution. Creating this project has not only enhanced my knowledge of website design
@@ -287,20 +288,21 @@
             </li>
         </ul>
 
-        <p class="truncate">
-            <script>
-                document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");
-            </script>
-        </p>
-        <p class="first-letter:text-[#409EFE] truncate">Version: <span>1.1.1</span></p>
+        <script>document.write("Your screen size: " + window.innerWidth + "W ⨉ " + window.innerHeight + "H");</script>
+        <p class="first-letter:text-[#409EFE] truncate">Version: <span id="version"></span></p>
         <p class="first-letter:text-[#409EFE] truncate">
             <script>document.write("&copy; " + (new Date().getFullYear()))</script>
             <span title="Centered101 website" class="text-[#409EFE] underline-offset-1">
-                <a onclick="nextPage(this)" href="https://centered101.netlify.app/">Centered101</a>
+                <a href="https://centered101.netlify.app/">Centered101</a>
             </span>— All Rights Reserved.
         </p>
     </footer>
+
 </body>
 <script src="script.js"></script>
+<script src="https://project-test-submission.web.app/script/path/to/version.js"></script>
+<script>
+    document.getElementById('version').textContent = appVersionPortfolio;
+</script>
 
 </html>

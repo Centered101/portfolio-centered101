@@ -18,6 +18,7 @@ links.forEach(link => {
     if (!link.getAttribute('href') || link.getAttribute('href') === '#') {
         // ถ้า href ว่าง ให้ปิดการใช้งานการคลิก
         link.classList.add('cursor-default');
+        link.classList.add('opacity-25');
         link.onclick = (event) => {
             event.preventDefault(); // ป้องกันการทำงานของลิงค์
         };
